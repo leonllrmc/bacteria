@@ -21,6 +21,7 @@ def run_credits(screen, clock):
             i = credits_strs.index(credit_str) + 1
             img = font.render(credit_str, False, (255, 255, 255))
             screen.blit(img, (400 - (img.get_width() // 2), i * img.get_height() * 2))
+        screen.blit(font.render("Press Esc to exit", False, (255, 255, 255)), (400 - (img.get_width() // 2), len(credits_strs) * img.get_height() * 3))
 
         pygame.display.flip()
 
